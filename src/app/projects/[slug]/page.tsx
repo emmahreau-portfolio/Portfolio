@@ -15,15 +15,24 @@ interface ProjectPageProps {
 }
 
 export async function generateStaticParams() {
-  const slugs = getProjectSlugs()
-  return slugs.map((slug) => ({
-    slug,
-  }))
+  try {
+    const slugs = getProjectSlugs()
+    return slugs.map((slug) => ({
+      slug,
+    }))
+  } catch (error) {
+    console.error('Error generating static params:', error)
+    return [] // Retourner un tableau vide en cas d'erreur
+  }
 }
+
+// Désactiver la vérification stricte pour permettre les nouveaux projets
+export const dynamicParams = true
 
 export async function generateMetadata({ params }: ProjectPageProps) {
   const { slug } = await params
-  const project = getProjectData(slug)
+  const decodedSlug = decodeURIComponent(slug)
+  const project = getProjectData(decodedSlug)
   
   if (!project) {
     return {
@@ -44,7 +53,9 @@ export async function generateMetadata({ params }: ProjectPageProps) {
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params
-  const project = getProjectData(slug)
+  // Décoder le slug pour gérer les caractères spéciaux
+  const decodedSlug = decodeURIComponent(slug)
+  const project = getProjectData(decodedSlug)
   
   if (!project) {
     notFound()
