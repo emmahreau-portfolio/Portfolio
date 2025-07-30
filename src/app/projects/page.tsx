@@ -1,9 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { Eye, ExternalLink } from "lucide-react"
-import { getAllProjects, type Project } from "@/lib/content"
+import { getAllProjects } from "@/lib/content"
 import ProjectsClient from "./projects-client"
 
 export default function ProjectsPage() {

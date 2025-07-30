@@ -26,9 +26,6 @@ export async function generateStaticParams() {
   }
 }
 
-// Désactiver la vérification stricte pour permettre les nouveaux projets
-export const dynamicParams = true
-
 export async function generateMetadata({ params }: ProjectPageProps) {
   const { slug } = await params
   const decodedSlug = decodeURIComponent(slug)
