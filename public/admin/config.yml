@@ -5,6 +5,9 @@ backend:
   base_url: https://foliobase.netlify.app  # URL de votre site
   auth_endpoint: /.netlify/functions/auth  # Notre fonction d'authentification
 
+# URL du site pour afficher un lien dans la navbar du CMS
+site_url: https://foliobase.netlify.app
+
 # Configuration du stockage des médias avec Cloudinary
 media_library:
   name: cloudinary
@@ -53,6 +56,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
+      - { label: "Ordre d'affichage", name: "ordre", widget: "number", value_type: "int", min: 1, default: 1, hint: "1 = affiché en premier, 2 = deuxième, etc." }
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date de création", name: "date", widget: "datetime" }
       - { label: "Annonceur", name: "annonceur", widget: "string", required: false }

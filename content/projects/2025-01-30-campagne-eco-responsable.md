@@ -2,7 +2,8 @@
 title: Campagne Éco-Responsable - Green Future
 date: 2025-01-30T14:30:00.000+01:00
 annonceur: Green Future Association
-contexte: École
+contexte: Alternance
+contexte_autre: sdsdd
 project_type: Identité visuelle
 tools:
   - Adobe Illustrator
@@ -21,8 +22,12 @@ gallery:
 duration: 3 mois
 status: Terminé
 project_url: https://example.com/green-future
-cibles: Jeunes adultes de 18-35 ans sensibles à l'écologie et aux enjeux environnementaux. Familles soucieuses de leur impact écologique.
-strategie_creative: Création d'un univers visuel moderne et naturel, alliant codes contemporains et références à la nature. Utilisation d'une palette verte apaisante avec des accents de terre pour évoquer l'authenticité et la proximité avec l'environnement.
+cibles: Jeunes adultes de 18-35 ans sensibles à l'écologie et aux enjeux
+  environnementaux. Familles soucieuses de leur impact écologique.
+strategie_creative: Création d'un univers visuel moderne et naturel, alliant
+  codes contemporains et références à la nature. Utilisation d'une palette verte
+  apaisante avec des accents de terre pour évoquer l'authenticité et la
+  proximité avec l'environnement.
 objectifs_cognitifs:
   - Sensibiliser aux enjeux du développement durable
   - Informer sur les gestes éco-responsables du quotidien
@@ -51,8 +56,10 @@ preuves:
     url: https://green-future-campaign.exemple.com
   - type: Video
     description: Teaser vidéo de la campagne
-    youtube_url: https://www.youtube.com/watch?v=example123
-excerpt: Création d'une identité visuelle complète pour une campagne de sensibilisation écologique, incluant logo, affiches, supports digitaux et charte graphique.
+    youtube_url: https://www.youtube.com/watch?v=msVkl0DRY18
+excerpt: Création d'une identité visuelle complète pour une campagne de
+  sensibilisation écologique, incluant logo, affiches, supports digitaux et
+  charte graphique.
 published: true
 ---
 

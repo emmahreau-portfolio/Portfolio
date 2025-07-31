@@ -1,14 +1,20 @@
 ---
-title: "Identité Visuelle - Startup Tech"
-date: "2024-01-15"
-client: "TechStart"
-project_type: "Identité visuelle"
+ordre: 1
+title: Identité Visuelle - Startup Tech
+date: 2024-01-15
+contexte: Alternance
+contexte_autre: qsdqqdqd
+project_type: Identité visuelle
+featured_image:
+  - https://res.cloudinary.com/dtnbb9ykw/image/upload/v1753869390/samples/food/fish-vegetables.jpg
+excerpt: Création d'une identité visuelle moderne pour une startup technologique
+  innovante.
+client: TechStart
 tools:
-  - "Adobe Illustrator"
-  - "Adobe Photoshop"
-  - "Figma"
-status: "Terminé"
-excerpt: "Création d'une identité visuelle moderne pour une startup technologique innovante."
+  - Adobe Illustrator
+  - Adobe Photoshop
+  - Figma
+status: Terminé
 published: true
 ---
 

@@ -18,6 +18,7 @@ export interface ProjectEvidence {
 
 export interface Project {
   slug: string
+  ordre: number
   title: string
   date: string
   annonceur?: string
@@ -91,7 +92,13 @@ export function getAllProjects(): Project[] {
       })
       .filter((project): project is Project => project !== null)
       .filter(project => project.published)
-      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .sort((a, b) => {
+        // Tri par ordre d'abord (1, 2, 3...), puis par date si égal
+        if (a.ordre !== b.ordre) {
+          return a.ordre - b.ordre
+        }
+        return new Date(b.date).getTime() - new Date(a.date).getTime()
+      })
 
     return projects
   } catch (error) {
@@ -117,6 +124,7 @@ export function getProjectData(slug: string): Project | null {
       body: content,
       tools: data.tools || [],
       gallery: data.gallery || [],
+      ordre: data.ordre || 999, // Valeur par défaut si pas définie
     } as Project
   } catch (error) {
     console.error(`Error reading project ${slug}:`, error)
