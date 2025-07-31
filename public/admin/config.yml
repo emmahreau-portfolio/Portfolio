@@ -54,14 +54,14 @@ collections:
     label: "Réalisations"
     folder: "content/projects"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Ordre d'affichage", name: "ordre", widget: "number", value_type: "int", min: 1, default: 1, hint: "1 = affiché en premier, 2 = deuxième, etc." }
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date de création", name: "date", widget: "datetime" }
       - { label: "Annonceur", name: "annonceur", widget: "string", required: false }
       - { label: "Contexte", name: "contexte", widget: "select", options: ["Alternance", "École", "Projet personnel", "Client", "Autre"] }
-      - { label: "Précision contexte", name: "contexte_autre", widget: "string", required: true, condition: { field: "contexte", value: "Autre" } }
+      - { label: "Précision contexte", name: "contexte_autre", widget: "string", required: false, condition: { field: "contexte", value: "Autre" }, hint: "Ce champ est obligatoire quand 'Autre' est sélectionné" }
       - { label: "Type de projet", name: "project_type", widget: "select", options: ["Identité visuelle", "Site web", "Print", "Packaging", "Illustration", "Autre"] }
       - { label: "Technologies/Outils", name: "tools", widget: "list", field: { label: "Outil", name: "tool", widget: "string" } }
       - { label: "Image principale", name: "featured_image", widget: "image" }
