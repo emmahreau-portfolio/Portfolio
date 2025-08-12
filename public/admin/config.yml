@@ -12,8 +12,8 @@ site_url: https://teal-creponne-f7bf9c.netlify.app
 media_library:
   name: cloudinary
   config:
-    cloud_name: dtnbb9ykw  # À remplacer par le nom de votre compte Cloudinary
-    api_key: 116398255276922        # À remplacer par votre clé API Cloudinary
+    cloud_name: dh5b2w0xi  # À remplacer par le nom de votre compte Cloudinary
+    api_key: 167992478648974        # À remplacer par votre clé API Cloudinary
     multiple: true
 
 # Dossier de stockage des médias dans le repository (fallback pour PDF > 20MB)
@@ -56,16 +56,17 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Ordre d'affichage", name: "ordre", widget: "number", value_type: "int", min: 1, default: 1, hint: "1 = affiché en premier, 2 = deuxième, etc." }
+      - { label: "Ordre d'affichage", name: "ordre", widget: "number", value_type: "int", min: 1, default: 1, required: false, hint: "1 = affiché en premier, 2 = deuxième, etc." }
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date de création", name: "date", widget: "datetime" }
+      - { label: "Client", name: "client", widget: "string", required: false }
       - { label: "Annonceur", name: "annonceur", widget: "string", required: false }
-      - { label: "Contexte", name: "contexte", widget: "select", options: ["Alternance", "École", "Projet personnel", "Client", "Autre"] }
-      - { label: "Précision contexte", name: "contexte_autre", widget: "string", required: false, condition: { field: "contexte", value: "Autre" }, hint: "Ce champ est obligatoire quand 'Autre' est sélectionné" }
+      - { label: "Contexte", name: "contexte", widget: "select", options: ["Alternance", "École", "Projet personnel", "Client", "Autre"], required: false }
+      - { label: "Précision contexte", name: "contexte_autre", widget: "string", required: false, hint: "Ce champ est obligatoire quand 'Autre' est sélectionné" }
       - { label: "Type de projet", name: "project_type", widget: "select", options: ["Identité visuelle", "Site web", "Print", "Packaging", "Illustration", "Autre"] }
       - { label: "Technologies/Outils", name: "tools", widget: "list", field: { label: "Outil", name: "tool", widget: "string" } }
-      - { label: "Image principale", name: "featured_image", widget: "image" }
-      - { label: "Galerie d'images", name: "gallery", widget: "list", field: { label: "Image", name: "image", widget: "image" } }
+      - { label: "Image principale", name: "featured_image", widget: "list", field: { label: "Image", name: "image", widget: "image" } }
+      - { label: "Galerie d'images", name: "gallery", widget: "list", field: { label: "Image", name: "image", widget: "image" }, required: false }
       - { label: "Durée du projet", name: "duration", widget: "string", required: false }
       - { label: "Statut", name: "status", widget: "select", options: ["En cours", "Terminé", "En pause"], default: "Terminé" }
       - { label: "Portfolio PDF", name: "pdf_portfolio", widget: "file", required: false, hint: "Taille recommandée : moins de 20MB" }
@@ -83,8 +84,8 @@ collections:
           { label: "URL", name: "url", widget: "string", required: false, condition: { field: "type", value: "URL" } },
           { label: "URL YouTube", name: "youtube_url", widget: "string", required: false, condition: { field: "type", value: "Video" }, hint: "URL complète de la vidéo YouTube" }
         ] }
-      - { label: "Extrait", name: "excerpt", widget: "text" }
-      - { label: "Description complète", name: "body", widget: "markdown" }
+      - { label: "Extrait", name: "excerpt", widget: "text", required: false }
+      - { label: "Description complète", name: "body", widget: "markdown", required: false }
       - { label: "Publié", name: "published", widget: "boolean", default: true }
 
 # Configuration de l'éditeur
