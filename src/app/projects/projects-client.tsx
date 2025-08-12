@@ -101,7 +101,7 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
                   )}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
                     <Button size="sm" asChild>
-                      <Link href={`/projects/${project.slug}`}>
+                      <Link href={`/projects/${encodeURIComponent(project.slug)}`}>
                         <Eye className="mr-2 h-4 w-4" />
                         Voir le projet
                       </Link>
@@ -119,7 +119,7 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
                     </Badge>
                   </div>
                   <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                    <Link href={`/projects/${project.slug}`}>
+                    <Link href={`/projects/${encodeURIComponent(project.slug)}`}>
                       {project.title}
                     </Link>
                   </h3>

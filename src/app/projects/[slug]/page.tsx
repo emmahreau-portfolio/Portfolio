@@ -299,7 +299,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <div className="flex-1">
               {previousProject ? (
                 <Button variant="outline" asChild className="h-auto p-4 w-full justify-start">
-                  <Link href={`/projects/${previousProject.slug}`}>
+                  <Link href={`/projects/${encodeURIComponent(previousProject.slug)}`}>
                     <div className="flex items-center gap-3">
                       <ChevronLeft className="h-5 w-5 flex-shrink-0" />
                       <div className="text-left">
@@ -325,7 +325,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <div className="flex-1 flex justify-end">
               {nextProject ? (
                 <Button variant="outline" asChild className="h-auto p-4 w-full justify-end">
-                  <Link href={`/projects/${nextProject.slug}`}>
+                  <Link href={`/projects/${encodeURIComponent(nextProject.slug)}`}>
                     <div className="flex items-center gap-3">
                       <div className="text-right">
                         <p className="text-xs text-muted-foreground mb-1">Projet suivant</p>
