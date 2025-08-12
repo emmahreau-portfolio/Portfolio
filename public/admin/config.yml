@@ -2,11 +2,11 @@ backend:
   name: github
   repo: emmahreau-portfolio/portfolio  # Repository GitHub d'Emma
   branch: main
-  base_url: https://emmahreau-portfolio.netlify.app  # URL du site d'Emma
+  base_url: https://teal-creponne-f7bf9c.netlify.app  # URL réelle du site d'Emma
   auth_endpoint: /.netlify/functions/auth  # Notre fonction d'authentification
 
 # URL du site pour afficher un lien dans la navbar du CMS
-site_url: https://emmahreau-portfolio.netlify.app
+site_url: https://teal-creponne-f7bf9c.netlify.app
 
 # Configuration du stockage des médias avec Cloudinary
 media_library:
