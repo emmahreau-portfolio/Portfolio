@@ -13,7 +13,7 @@ status: Terminé
 project_url: https://example.com
 cibles: Public test
 excerpt: Projet de test créé par erreur - à supprimer
-published: false
+published: true
 ---
 
 # Projet de test
