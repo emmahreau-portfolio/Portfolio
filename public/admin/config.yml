@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: emmahreau-portfolio/portfolio  # Repository GitHub d'Emma
-  branch: main
+  branch: dev
   base_url: https://teal-creponne-f7bf9c.netlify.app  # URL réelle du site d'Emma
   auth_endpoint: /.netlify/functions/auth  # Notre fonction d'authentification
 
@@ -92,4 +92,4 @@ editor:
   preview: true
 
 # Configuration du workflow éditorial
-publish_mode: editorial_workflow 
+# publish_mode: editorial_workflow 
